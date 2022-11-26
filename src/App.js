@@ -111,6 +111,7 @@ const App = () => {
       .catch(error => {
         setShowError(true)
         setError(`Information of ${newName} has already been removed from server.`)
+        setPersons(persons.filter(p => p.name !== newName))
       })
     }
   }
